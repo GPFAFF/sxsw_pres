@@ -33,22 +33,22 @@
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
       }
       .remark-slide-content h1 {
-        font-size: 45px;
+        font-size: 46px;
       }
       .remark-slide-content h2 {
-        font-size: 35px;
+        font-size: 40px;
       }
       .remark-slide-content h3 {
-        font-size: 28px;
+        font-size: 32px;
       }
       .remark-slide-content h4 {
-        font-size: 22px;
+        font-size: 28px;
       }
       .remark-slide-content h5, li {
-        font-size: 18px;
+        font-size: 22px;
       }
       .remark-slide-content h6 {
-        font-size: 14px;
+        font-size: 18px;
       }
       .remark-slide-content h3, h4, h5, h6 {
         margin: 15px 5px;
@@ -336,9 +336,9 @@ template: offline-web
 template: offline-web
 # Offline isn't the biggest enemy - wifi-connection is
 
-###Offline is not an error
-###Offline is a fact of mobile life
-###An app that doesn't work offline is broken
+####Offline is not an error
+####Offline is a fact of mobile life
+####An app that doesn't work offline is broken
 
 ##How do we combat this? 
 
@@ -355,10 +355,10 @@ template: offline-web
 template: offline-web
 #What is a service worker?
 
-###JavaScript file that sits between your app and network.
-###Creates a richer offline experiences, periodic background syncs, push notifications.  Functionality that would normally require a native application are coming to the web
-###Examples are email, twitter, google chrome dinosaur game
-###They start and stop when they are being used.  So there is no need for a persistient state.  Would just need to include a local storage option.
+####JavaScript file that sits between your app and network.
+####Creates a richer offline experiences, periodic background syncs, push notifications.  Functionality that would normally require a native application are coming to the web
+####Examples are email, twitter, google chrome dinosaur game
+####They start and stop when they are being used.  So there is no need for a persistient state.  Would just need to include a local storage option.
 
 ##[Service Workers!!](http://www.html5rocks.com/en/tutorials/service-worker/introduction/)
 
@@ -422,28 +422,50 @@ template: sass
 #Going back to basics
 
 ####Some of the problems with CSS
- -Cross Browser compatability issues
- -Vendor prefixes
- -No vars, imports, nested selectors, functions, mixins, color manipulations
+######Cross Browser compatability issues
+######Vendor prefixes
+######No vars, imports, nested selectors, functions, mixins, color manipulations
 
-###Developers have been filling in the gaps with preprocessors
+##Developers have been filling in the gaps with preprocessors
 
-###
+###Problems with that?
+
+######Putting layers of abstraction between the code we write and the code the browsers can read.
+######Own syntax
+######Must be compiled
+######Browsers are catching up
 
 ---
 
 template: sass
 
-#Sass slide 2
+#POSTPROCESSORS
 
+######It's not about when you process your code its about what you're processing. 
+######Enter PostCSS and Babel
+######PostCSS is modular.  Sass gives you everything out of the box.  PostCSS you can pick and choose what you use. 
+
+###Advantages
+
+######Write CSS with CSS
+######Can write your own plugins with JavaScript
+######Faster compile times
+
+###Disadvantages
+
+######Support is still lagging
+######Not refined in some areas, calc, mixins/extends.
+######Ugly syntax as of right now.  
 ---
 
 template: sass
 
-#Sass slide 3
+#KICKING SASS Links
 
 ##[REPO](https://github.com/degdigital/kickingsass)
 ##[SLIDES](bit.ly/1LXTuVq)
+##[POSTCSS PLUGINS](http://postcss.parts/)
+##[BABEL](https://babeljs.io)
 ---
 
 class: eleventh, middle, center
