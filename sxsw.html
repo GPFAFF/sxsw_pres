@@ -114,7 +114,7 @@ template: nativescript
 
 template: nativescript
 
-#Mobile landscape today
+##Mobile landscape today
  - iOS
  - Objective C
  - GO
@@ -122,11 +122,15 @@ template: nativescript
  - Java
  - Web Views - Phonegap/Cordova, Ionic
 
-#Why is NativeScript different?
+##Why is NativeScript different?
  - Native SDK access via a JS bridge.
  - No webviews, No DOM, an actual app.
  - Full Platform API access - no compiling.
- - Highly Performant.
+ - Highly Performant.*
+ - Develop business logic with JS.
+ - Design and style with XML and CSS.
+ - Creates modules that expose the native device for iOS and Android and these modules at runtime target the platform. You're building and produce native code.
+
 ---
 template: nativescript
 
@@ -136,11 +140,7 @@ template: nativescript
 
 template: nativescript
 
-
-#Easy to get started
- - Develop business logic with JS.
- - Design and style with XML and CSS.
- - Creates modules that expose the native device for iOS and Android and these modules at runtime target the platform.you're building to and produce native code.
+#What did they talk about?
 
 ###Benefits Today
  - Skills Reuse.
@@ -152,10 +152,10 @@ template: nativescript
  - Continious Deployment. 
  - Build a factory for your apps.
 
-##[NativeScript Docs](https://docs.nativescript.org/img/architecture.png)
+###[NativeScript Docs](https://docs.nativescript.org/img/architecture.png)
 
 
-##[Getting started](http://docs.nativescript.org/start/getting-started)
+###[Getting started](http://docs.nativescript.org/start/getting-started)
 
 ---
 
@@ -166,21 +166,21 @@ template: techbrands
 
 template: techbrands
 #WHO?
- ####Head of Strategy from Droga5
+ - Head of Strategy from Droga5
  
- ####CCO from SquareSpace
+ - CCO from SquareSpace
  
- ####Startup Founder from Hello Alfred
+ - Startup Founder from Hello Alfred
  
- ####CDO from Under Armour
+ - CDO from Under Armour
  
 
 #What did they talk about?
  *What makes startups successful?*
 
- #####How they succeed, challenges, failures, painpoints, strategies?
- #####How do you monetize ads and startups?
- #####Was actually disappointed in this considering the great brands involved.  I don't know what it was but I was expecting more energy from these individuals.  It seemed like it was a more of a pitch process of how Droga5 works with technology companies to create ads and why you should go with them for business.  
+ - How they succeed, challenges, failures, painpoints, strategies?
+ - How do you monetize ads and startups?
+ - Was actually disappointed in this considering the great brands involved.  I don't know what it was but I was expecting more energy from these individuals.  It seemed like it was a more of a pitch process of how Droga5 works with technology companies to create ads and why you should go with them for business.  
 
 ---
 
@@ -195,10 +195,11 @@ template:brown
 
 ##Daring Greatly
 
-#####Accidental Ted Talk that garnered over 24 million views.
-#####Speaks about how you achieve the best of yourself when you are vunerable and how we as humans tend to think of vunerability as a negative trait.  Her talk is about embracing it.
+  - Accidental Ted Talk that garnered over 24 million views.
+  - Speaks about how you achieve the best of yourself when you are vunerable and how we as humans tend to think of vunerability as a negative trait.  Her talk is about embracing it.
+
 ### Why is this relevant?
-#####Programming moves very fast and the ability to know everything is impossible so by embracing that you wont know everything and you may look to others that you don't know what youre doing it will eventually lead to large growth because you will be pushing your comfort boundaries. 
+  - Programming moves very fast and the ability to know everything is impossible so by embracing that you wont know everything and you may look to others that you don't know what youre doing it will eventually lead to large growth because you will be pushing your comfort boundaries. 
 
 ##[POWER OF VUNERABILITY](https://embed-ssl.ted.com/talks/brene_brown_on_vulnerability.html)
 
@@ -213,12 +214,13 @@ template: patterns
 
 template: patterns
 
-#Talk about the IBM Watson Design Guide
- ####Built with Sass and available via Bower.
- ####Talked about the importance of having a style guide and how its played into designing and developing standards for Watson
- ####Showed demonstrations on how to create components within their style guide, create mixins, extends, etc.
- ####Open source project so anyone can contribute.
- ####Covered how their build process is set up and how the developers communicate with each other since the team is very large. 
+# What did they talk about? 
+ - Talk about the IBM Watson Design Guide.
+ - Built with Sass and available via Bower.
+ - Talked about the importance of having a style guide and how its played into designing and developing standards for Watson.
+ - Showed demonstrations on how to create components within their style guide, create mixins, extends, etc.
+ - Open source project so anyone can contribute.
+ - Covered how their build process is set up and how the developers communicate with each other since the team is very large. 
 
 ##[REPO](https://github.com/Lhuihui/pattern-library-workshop-sxsw2016)
 
@@ -234,94 +236,34 @@ template: ios-react
 
 template: ios-react
 
+
 #What was covered?
-
-###React Elements and Components
-
-####Most primitive data type in React is the Element.  Similar to DOM elements
-
-.codeblock[`var chicago = React.createElement('h1', null, "Chicago PL Meeting");`]
-
-####Basic Rendering
-
-.codeblock[`ReactDOM.render(chicago, document.getElementById('targetElement'));`]
-
-
-#### Not the best way to do it.  
-
-#### You can create Components with .codeblock[`React.createClass`]
----
-
-#Reacts' way to create Atomic pieces of code for the UI.
-
-.codeblock[
-      
-    var aprilMeeting = React.createClass({
-     render: function() {
-
-       return React.createElement('<section>', {},
-
-            React.creatElement('h1', {}, 'CHICAGO TECH'),
-
-            React.createElement('p', {}, 'Talking about code'),
-            )
-        }
-    })
-ReactDOM.render(React.createElement(aprilMeeting, {}), document.getElementById("targetElement"));]
-
----
-
-#Props and State
-
-##Props
-####Props provide a way to send instructions to a component for how it should operate
-####Can work on a uni-lateral information flow
-#### When a component receives props it knows to re-render
-
-##State
-####State is internal to a component.  
-####Keeps track of local data
-####
-
-
----
-
-###JSX
-
-####Extension to JavaScript that adds HTML like syntax to the language. 
-
-#### Done with a complier, ex. Babel. 
-#### Easily drop in content within your component
-
-.codeblock[
-  var App = React.createClass({
-    
-      render() {
-        
-        var team = this.props.team
-
-        return (
-          <section>
-            <h1> You have {team.length} </h1>
-            <TeamList team = {team} />
-          </section>
-        )
-      }
-  })
   
-  ReactDOM.render( `<App team={team}/>`, document.getElementById('targetElem'))
-]
+### React
+  - React Elements and Components
+  - Basic Rendering
+  - Props and State
+  - JSX 
+  - Events
+  - Made a simple to-do list
+
+### REACT Native
+  - A how to on creating several basic mobile apps with React Native.
+  - Went over how it compares in terms of other languages, NativeScript, Objective C, Swift, Java etc
+  - Gives web developers who don't know Objective C a way to write 'native' mobile applications using their exisiting skills. 
+  - Can be done in really fast dev cycles.  Can build devices which connect to your local package manager. 
+  - Cross platform, can use other code too Objective C, Swift, Java etc. 
+
 ---
-###Events
----
-template: ios-react
 
 #Takeaways
 
-#### React is good at pushing changes to the DOM
-#### React is a view library.  Wont impose on your model.
-#### Not the greatest for events
-#### Still slick as F**K 
+- React is good at pushing changes to the DOM, refreshing, mangage UI updates.
+- React is all about building reusable components.
+- React is a view library.  Wont impose on your model. It's about constructing views.
+- Difference between React and React Native, one is for browsers one is for iOS and Android.
+- Fast performance for both.
+- Both are very easy to get started and have a quick ramp up time to start producing. 
 
 ##[TUTORIAL](https://share.viget.com/sxsw/rn-workshop/index.html)
 ##[REPO](https://github.com/vigetlabs/beginning-react-native)
@@ -336,29 +278,22 @@ template: offline-web
 template: offline-web
 # Offline isn't the biggest enemy - wifi-connection is
 
-####Offline is not an error
-####Offline is a fact of mobile life
-####An app that doesn't work offline is broken
+- Offline is not an error
+- Offline is a fact of mobile life
+- An app that doesn't work offline is broken
 
-##How do we combat this? 
+###How do we combat this? 
 
-####Storing assets offline
-#####App Cache
+- Storing assets offline like App Cache
+- Or use Local Storage - ex. INDEXDB
+- Use a service worker
 
-###A way to store app info offline - Local Storage
-#####INDEXDB
+###What is a service worker?
 
-####A way to still have interactions in the background?
-#####Service Worker
-
----
-template: offline-web
-#What is a service worker?
-
-####JavaScript file that sits between your app and network.
-####Creates a richer offline experiences, periodic background syncs, push notifications.  Functionality that would normally require a native application are coming to the web
-####Examples are email, twitter, google chrome dinosaur game
-####They start and stop when they are being used.  So there is no need for a persistient state.  Would just need to include a local storage option.
+- JavaScript file that sits between your app and network.
+- Creates a richer offline experiences, periodic background syncs, push notifications.  Functionality that would normally require a native application are coming to the web
+- Examples are Email, Twitter, Google Chrome Dinosaur Game
+- They start and stop when they are being used.  So there is no need for a persistient state. 
 
 ##[Service Workers!!](http://www.html5rocks.com/en/tutorials/service-worker/introduction/)
 
@@ -394,20 +329,25 @@ template: node
 
 template: node
 
-#NODE SLIDE 1
+#What was covered? 
 
----
+###Why you would use node?
+ - Getting apps up and running is easy. 
+ - Flexible.
+ - Can roll your own JS. 
 
-template: node
+###Tutorials
+ - Went over setting up services
+ - Seperating those services
+ - Setting up express
+ - How Node handles the event loop (never block it, use async operations for long tasks)
+ - adding some preprocessors (Jade, Stylus)
+ - Using views and routes to create a User login
+ - Set up passport for User Authentication.
+ - Unit test your code
+ - Watch out for memory leaks
 
-#NODE SLIDE 2
-
----
-
-template: node
-
-#NODE SLIDE 3
-
+##[REPO](https://github.com/snodgrass23/SXSW-2106-Node-Works)
 ---
 
 class: tenth center, middle
@@ -419,43 +359,44 @@ template: sass
 
 template: sass
 
-#Going back to basics
+#What was covered?
 
 ####Some of the problems with CSS
-######Cross Browser compatability issues
-######Vendor prefixes
-######No vars, imports, nested selectors, functions, mixins, color manipulations
+  - Cross Browser compatability issues
+  - Vendor prefixes
+  - No vars, imports, nested selectors, functions, mixins, color manipulations
 
 ##Developers have been filling in the gaps with preprocessors
 
 ###Problems with that?
 
-######Putting layers of abstraction between the code we write and the code the browsers can read.
-######Own syntax
-######Must be compiled
-######Browsers are catching up
+  - Putting layers of abstraction between the code we write and the code the browsers can read.
+  - Own syntax
+  - Must be compiled
+  - Browsers are catching up
 
 ---
 
 template: sass
 
-#POSTPROCESSORS
+#Takeaways
 
-######It's not about when you process your code its about what you're processing. 
-######Enter PostCSS and Babel
-######PostCSS is modular.  Sass gives you everything out of the box.  PostCSS you can pick and choose what you use. 
+- Postproccessors
+- It's not about when you process your code its about what you're processing. 
+- Enter PostCSS and Babel
+- PostCSS is modular.  Sass gives you everything out of the box.  PostCSS you can pick and choose what you use. 
 
 ###Advantages
 
-######Write CSS with CSS
-######Can write your own plugins with JavaScript
-######Faster compile times
+- Write CSS with CSS
+- Can write your own plugins with JavaScript
+- Faster compile times
 
 ###Disadvantages
 
-######Support is still lagging
-######Not refined in some areas, calc, mixins/extends.
-######Ugly syntax as of right now.  
+- Support is still lagging
+- Not refined in some areas, calc, mixins/extends.
+- Ugly syntax as of right now.  
 ---
 
 template: sass
